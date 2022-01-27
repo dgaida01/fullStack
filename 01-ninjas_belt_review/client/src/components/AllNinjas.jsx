@@ -9,7 +9,7 @@ const AllNinjas = ()=>{
   
 
     useEffect(()=>{
-    axios.get('http://localhost:8000/api/allNinjas')
+    axios.get('http://localhost:8000/api/ninjas')
     .then(res=>{
         console.log(res);
         setListOfNinjas(res.data.results)
@@ -20,7 +20,7 @@ const AllNinjas = ()=>{
 
 
     let deleteNinja=(ninjaID)=>{
-        axios.delete(`http://localhost:8000/api/deleteNinja/${ninjaID}`)
+        axios.delete(`http://localhost:8000/api/ninjas/${ninjaID}`)
         .then(res=>{
             console.log(res);
         })

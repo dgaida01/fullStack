@@ -19,7 +19,7 @@ const NinjaForm = () =>{
             numBelts,
             isVeteran
         }
-        axios.post('http://localhost:8000/api/addNinja',ninjaObj)
+        axios.post('http://localhost:8000/api/ninjas',ninjaObj)
         .then(res=>{
             console.log(res.data);
         })

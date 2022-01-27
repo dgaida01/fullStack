@@ -10,7 +10,7 @@ const OneNinja = () => {
     const history = useHistory();
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/aNinja/${id}`)
+        axios.get(`http://localhost:8000/api/ninjas/${id}`)
         .then(res=>{
             console.log("response when making request for one ninja", res)
             //save res.data.results into state
@@ -22,7 +22,7 @@ const OneNinja = () => {
         //delete the ninja
         const deleteNinja =()=>{
             console.log('deleteing');
-            axios.delete(`http://localhost:8000/api/deleteNinja/${id}`)
+            axios.delete(`http://localhost:8000/api/ninjas/${id}`)
             .then(res=>{
                 console.log(res);
             })

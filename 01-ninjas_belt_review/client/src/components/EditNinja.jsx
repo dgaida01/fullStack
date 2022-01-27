@@ -38,7 +38,7 @@ const EditNinja = () =>{
     const {id}=useParams();
     
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/aNinja/${id}`)
+        axios.get(`http://localhost:8000/api/ninjas/${id}`)
         .then(res=>{
             console.log("response when making request for one ninja", res)
             //save res.data.results into state
@@ -50,7 +50,7 @@ const EditNinja = () =>{
 
     let updateNinjaHandler =(e)=>{
         e.preventDefault();
-        axios.put(`http://localhost:8000/api/updateNinja/${id}`,ninjaDetails)
+        axios.put(`http://localhost:8000/api/ninjas/${id}`,ninjaDetails)
         .then(res=>{
             console.log(res.data);
 
